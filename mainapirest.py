@@ -48,7 +48,7 @@ def list():
         connection.close()
 
 
-
+# Endpoint para actualizar los usuarios
 @app.route('/usuarios', methods=["PUT"])
 def update_user():
     data = request.get_json()
@@ -80,7 +80,7 @@ def update_user():
         return jsonify({'error': str(e)}), 500
     
 
-
+# Endpoint para borar los usuarios
 
 @app.route('/usuarios', methods=["DELETE"])
 def delete():
